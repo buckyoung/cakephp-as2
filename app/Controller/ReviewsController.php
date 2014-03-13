@@ -7,8 +7,9 @@ class ReviewsController extends AppController{
 	}
 	
 	public function add(){
-		if( $this->request->is('post) ){
-			
+		if( $this->request->is('post') ){
+			//save data
+			$this->Review->save( $this->request->data );
 		}
 	}
 }
