@@ -24,3 +24,9 @@
 <p>It must not offer users links to edit or delete posts that they did not originally author.</p>
 <p>It must offer users a link to add a new review.</p>
 <p>Visitors who are not logged in should not be allowed to create reviews.</p>
+
+<br><br><br>
+<hr>
+<br><br><br>
+<h2>Site Map --DEBUG--</h2>
+<a href="./reviews/add/">Add Review</a>
