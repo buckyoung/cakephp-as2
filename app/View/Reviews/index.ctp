@@ -7,7 +7,23 @@
 
 <table>
 
-<th>Title</th><th>Rating</th><th>Media</th><th>Options</th><th>Created</th>
+<tr><th>Title</th><th>Rating</th><th>Media</th><th>Options</th><th>Created</th></tr>
+
+
+//PRINT EVERY REVIEW TABLE
+<?php foreach($reviews as $review): ?>
+
+	<tr>
+		<td><?php echo $review['Review']['title']; ?></td>
+		<td><?php echo $review['Review']['rating']; ?></td>
+		<td><?php echo $review['Review']['media']; ?></td>
+		<td>x x x</td>
+		<td><?php echo $review['Review']['created']; ?></td>
+	</tr>
+	
+<?php endforeach; ?>
+//END PRINT TABLE
+
 
 </table>
 
