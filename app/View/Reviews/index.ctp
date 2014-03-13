@@ -43,4 +43,6 @@
 <hr>
 <br><br><br>
 <h2>Site Map --DEBUG--</h2>
-<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add/">Add Review</a>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add/">Add Review</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/">View User Index</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/add/">Add User</a><br>
