@@ -15,8 +15,8 @@ class ReviewsController extends AppController{
 			//save data
 			$this->Review->save( $this->request->data );
 			
-			//Redirect
-			$this->redirect('/');
+			//Redirect -- BUG: will redirect before validating data
+			//$this->redirect('/reviews/');
 		}
 	}
 }

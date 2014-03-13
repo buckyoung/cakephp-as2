@@ -10,7 +10,6 @@
 <tr><th>Title</th><th>Rating</th><th>Media</th><th>Options</th><th>Created</th></tr>
 
 
-//PRINT EVERY REVIEW TABLE
 <?php foreach($reviews as $review): ?>
 
 	<tr>
@@ -22,7 +21,6 @@
 	</tr>
 	
 <?php endforeach; ?>
-//END PRINT TABLE
 
 
 </table>
@@ -45,4 +43,4 @@
 <hr>
 <br><br><br>
 <h2>Site Map --DEBUG--</h2>
-<a href="./reviews/add/">Add Review</a>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add/">Add Review</a>
