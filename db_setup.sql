@@ -1,0 +1,9 @@
+USE bcy3db;
+DROP TABLE IF EXISTS users;
+CREATE TABLE users(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+user_id INT UNSIGNED,
+user_name VARCHAR(50),
+created DATETIME,
+modified DATETIME
+);
