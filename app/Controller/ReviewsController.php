@@ -14,6 +14,9 @@ class ReviewsController extends AppController{
 		if( $this->request->is('post') ){
 			//save data
 			$this->Review->save( $this->request->data );
+			
+			//Redirect
+			$this->redirect('/');
 		}
 	}
 }
