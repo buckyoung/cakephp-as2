@@ -23,8 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		BCY3 | As2 | <?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -41,7 +40,29 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
+		
 		<div id="content">
+		
+		
+		
+		
+		<div id="DEBUG_NAV">
+			<h5>Debug Navigation</h5>
+			<h5>[View/Layouts/default.ctp]</h5>
+			<p>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/">User Index</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/add">Add User</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/">Review Index</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add">Add Review</a><br>
+			</p>
+		<hr><hr>
+		<br>			
+		</div>
+		
+		
+
+
+
 
 			<?php echo $this->Session->flash(); ?>
 
