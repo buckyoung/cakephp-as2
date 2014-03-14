@@ -52,6 +52,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<p>
 <a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/">User Index</a><br>
 <a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/add">Add User</a><br>
+<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/users/login">Login</a><br>
+
 <a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/">Review Index</a><br>
 <a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add">Add Review</a><br>
 			</p>

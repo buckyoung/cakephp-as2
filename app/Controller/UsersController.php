@@ -1,8 +1,9 @@
 <?php
 
 class UsersController extends AppController{
-	
-	
+
+//TODO: INIT auth components array
+
 	public function index(){
 		//fetch all for listing
 		$users = $this->User->find('all');
@@ -24,9 +25,10 @@ class UsersController extends AppController{
 
 	
 	public function login(){
-	
-		//TODO
-	
+		if( $this->request->is('post') ){
+			//TODO: HANDLE login (sessions?)	
+		}	
+			
 	}
 
 
