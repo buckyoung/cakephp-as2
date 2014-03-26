@@ -4,10 +4,10 @@
 <p>(Messages)</p>-->
 
 <?php
-	$this->set('userid', $this->Auth->user('id'));
-	$this->set('username', $this->Auth->user('username'));
+	//$this->set('userid', $this->Auth->user('id'));
+	//$this->set('username', $this->Auth->user('username'));
 	
-	if ( !$userid ){ //if userid is not even set
+	if ( unset($userid) ){ //if userid is not even set
 		echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'));
 		echo " or ";
 		echo $this->Html->link('Create New User', array('controller' => 'users', 'action' => 'add'));
