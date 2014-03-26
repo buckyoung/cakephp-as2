@@ -37,7 +37,7 @@ class AppController extends Controller {
         'Auth' => array(
             'loginRedirect' => array( //where do login's go?
                 'controller' => 'reviews',
-                'action' => 'poop'
+                'action' => 'index'
             ),
             'logoutRedirect' => array( //where to logouts go?
                 'controller' => 'reviews',
