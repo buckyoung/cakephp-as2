@@ -2,7 +2,7 @@
 
 class UsersController extends AppController{
 
-//TODO: INIT auth components array
+	public $helpers = array('Html', 'Form');
 
 	public function beforeFilter() { //allow a new user to add a user
         parent::beforeFilter();
