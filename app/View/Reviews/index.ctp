@@ -9,7 +9,7 @@
 		echo " or ";
 		echo $this->Html->link('Create New User', array('controller' => 'users', 'action' => 'add'));
 	} else {
-		echo "Logged in as " . $username;
+		echo "Logged in as " . $username . "<br />";
 		echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
 	}
 ?>
@@ -27,7 +27,11 @@
 		<td><?php echo $review['Review']['media']; ?></td>
 		<td><?php //OPTIONAL ACTIONS
 
-		if ( $userid == $post )
+		if ( $userid == $review['Review']['user_id'] ){
+			echo "owned";
+		} else {
+			echo "not own";
+		}
 
 		?></td>
 		<td><?php echo $review['Review']['created']; ?></td>
