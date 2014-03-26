@@ -19,6 +19,8 @@ class ReviewsController extends AppController{
 			if ($this->Review->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Review created.'));
                 return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The review could not be saved. Please, try again.'));
 			}
 			
 			//Redirect -- BUG: will redirect before validating data
