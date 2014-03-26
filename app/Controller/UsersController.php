@@ -6,7 +6,10 @@ class UsersController extends AppController{
 
 	public function beforeFilter() { //allow a new user to add a user
         parent::beforeFilter();
-        $this->Auth->allow('add');
+        //allow unauthed to add a new user
+        //allow logout (?)
+        $this->Auth->allow('add', 'logout');
+
     }
 
 	public function index(){
@@ -33,10 +36,18 @@ class UsersController extends AppController{
 
 	
 	public function login(){
-		if( $this->request->is('post') ){
-			//TODO: HANDLE login (sessions?)	
-		}	
+		if ($this->request->is('post')) {
+	        if ($this->Auth->login()) {
+	           	return $this->redirect($this->Auth->redirect());
+	        }
+        	
+        	$this->Session->setFlash(__('Invalid username or password, try again'));
+    	}
 			
+	}
+
+	public function logout() {
+    	return $this->redirect($this->Auth->logout());
 	}
 
 
