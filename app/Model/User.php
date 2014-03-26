@@ -1,4 +1,5 @@
-<?php
+
+<?php //User model
 
 class User extends AppModel{
 
@@ -10,8 +11,8 @@ class User extends AppModel{
 			),
 		
 		'password' => array(
-			'rule' => array('between', '5', '20'),
-			'message' => 'Please enter a password between 5 and 20 characters.'
+			'rule' => 'notEmpty',
+			'message' => 'Please enter a password.'
 			)
 		
 		

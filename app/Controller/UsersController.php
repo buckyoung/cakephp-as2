@@ -1,4 +1,4 @@
-<?php
+<?php //user controller
 
 class UsersController extends AppController{
 
@@ -16,7 +16,12 @@ class UsersController extends AppController{
 	public function add(){
 		if( $this->request->is('post') ){
 			//save data
-			$this->User->save( $this->request->data );
+			if($this->User->save( $this->request->data ) ){
+				$this->Session->setFlash(__('The user has been saved'));
+                return $this->redirect(array('action' => '/users/'));
+			} else {
+				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
+			}
 			
 			//Redirect -- BUG: will redirect automatically without validating data
 			//$this->redirect('/users/');
