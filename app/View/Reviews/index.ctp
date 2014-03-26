@@ -28,7 +28,7 @@
 		<td><?php //OPTIONAL ACTIONS
 
 		pr($userid);
-		echo $review['Review']['user_id'];
+		pr($review['Review']['user_id']);
 
 		if ( $userid == $review['Review']['user_id'] ){
 			echo "owned";
