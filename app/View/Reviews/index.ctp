@@ -3,7 +3,16 @@
 <!--<p>(Logout)</p>
 <p>(Messages)</p>-->
 
-<p><a href="/~bcy3/cakephp/users/login">Login</a> or <a href="/~bcy3/cakephp/users/add">Create New User</a></p>
+<?php
+	if ( !$userid ){ //if userid is not even set
+		echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login'));
+		echo " or ";
+		echo $this->Html->link('Create New User', array('controller' => 'users', 'action' => 'add'));
+	} else {
+		echo "Logged in as " . $username;
+		echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
+	}
+?>
 
 <table>
 
@@ -16,7 +25,11 @@
 		<td><?php echo $review['Review']['title']; ?></td>
 		<td><?php echo $review['Review']['rating']; ?></td>
 		<td><?php echo $review['Review']['media']; ?></td>
-		<td>x x x</td>
+		<td><?php //OPTIONAL ACTIONS
+
+		if ( $userid == $post )
+
+		?></td>
 		<td><?php echo $review['Review']['created']; ?></td>
 	</tr>
 	
@@ -26,7 +39,13 @@
 </table>
 
 <br />
-<p><a href="/~bcy3/cakephp/reviews/add">Add Review</a></p>
+<p>
+<?php
+	if ( $userid ){ //if userid is set
+		echo $this->Html->link('Add Review', array('controller' => 'reviews', 'action' => 'add'));
+	}
+?>
+</p>
 
 
 
