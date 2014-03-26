@@ -36,19 +36,22 @@ class AppController extends Controller {
         'Session',
         'Auth' => array(
             'loginRedirect' => array( //where do login's go?
-                'controller' => 'posts',
+                'controller' => 'reviews',
                 'action' => 'index'
             ),
             'logoutRedirect' => array( //where to logouts go?
-                'controller' => 'pages',
-                'action' => 'display',
+                'controller' => 'reviews',
+                'action' => 'index',
                 'home'
+            ),
+            'authenticate' => array(
+                'Form' => array('passwordHasher' => 'Blowfish') 
             )
         )
     );
 
     public function beforeFilter() { //before login, allow user to view all index and view actions in EVERY controller
-        $this->Auth->allow('index', 'view');
+        $this->Auth->allow(); //'index', 'view' -- farnan has nothing here...()
     }
 
 
