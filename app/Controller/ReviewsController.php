@@ -22,9 +22,6 @@ class ReviewsController extends AppController{
 			} else {
 				$this->Session->setFlash(__('The review could not be saved. Please, try again.'));
 			}
-			
-			//Redirect -- BUG: will redirect before validating data
-			//$this->redirect('/reviews/');
 		}
 	}
 }
