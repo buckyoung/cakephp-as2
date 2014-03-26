@@ -1,4 +1,4 @@
-<h2>Add User to MySQL Database -- DEBUG PAGE</h2>
+<h2>Create New User</h2>
 
 <?php
 
