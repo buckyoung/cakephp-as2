@@ -3,6 +3,8 @@
 class ReviewsController extends AppController{
 	
 	public function index(){
+		$this->set('userid', $this->Auth->user('id'));
+		$this->set('username', $this->Auth->user('username')); 
 		//fetch all for listing
 		$reviews = $this->Review->find('all');
 
