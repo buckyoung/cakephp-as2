@@ -47,7 +47,7 @@ class AppController extends Controller {
         )
     );
 
-    public function beforeFilter() { //before login, what can you see?
+    public function beforeFilter() { //before login, allow user to view all index and view actions in EVERY controller
         $this->Auth->allow('index', 'view');
     }
 

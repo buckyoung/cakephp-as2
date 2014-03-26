@@ -1,7 +1,6 @@
 <h2>Reviews</h2>
 
-<p>Login</p>
-<p>Create new user</p>
+<p><a href="">Login or Create new user</p>
 <p>(Logout)</p>
 <p>(Messages)</p>
 
