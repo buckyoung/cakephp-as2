@@ -1,6 +1,6 @@
 <h2>Reviews</h2>
 
-<p><a href="">Login or Create new user</p>
+<p><a href="/~bcy3/cakephp/users/login">Login</a> or <a href="/~bcy3/cakephp/users/add">Create New User</a></p>
 <p>(Logout)</p>
 <p>(Messages)</p>
 
