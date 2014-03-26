@@ -32,9 +32,6 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    $this->set('userid', $this->Auth->user('id')); 
-    $this->set('username', $this->Auth->user('username'));
-
 	 public $components = array(
         'Session',
         'Auth' => array(
