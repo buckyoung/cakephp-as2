@@ -4,6 +4,11 @@ class UsersController extends AppController{
 
 //TODO: INIT auth components array
 
+	public function beforeFilter() { //allow a new user to add a user
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
+
 	public function index(){
 		//fetch all for listing
 		$users = $this->User->find('all');
@@ -17,14 +22,12 @@ class UsersController extends AppController{
 		if( $this->request->is('post') ){
 			//save data
 			if($this->User->save( $this->request->data ) ){
-				$this->Session->setFlash(__('The user has been saved'));
+				$this->Session->setFlash(__('Welcome, new user!'));
                 return $this->redirect(array('action' => '../'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
 			
-			//Redirect -- BUG: will redirect automatically without validating data
-			//$this->redirect('/users/');
 		}
 	}
 
