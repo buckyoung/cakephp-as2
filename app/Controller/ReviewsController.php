@@ -3,9 +3,6 @@
 class ReviewsController extends AppController{
 	
 	public function index(){
-		if( $this->request->is('post') ){
-			pr($POST);
-		}
 		//fetch all for listing
 		$reviews = $this->Review->find('all');
 
