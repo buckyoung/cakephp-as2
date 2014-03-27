@@ -34,7 +34,7 @@
 		<td><?php echo $review['Review']['media']; ?></td>
 		<td><?php //OPTIONAL ACTIONS
 
-		if ( $userid == $review['Review']['user_id'] ){
+		if ( $userid == $review['User']['id'] ){
 			echo $this->Html->link('Edit', array('action' => 'edit'));
 			echo " ";
 			echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array('confirm'=> 'Are you sure you wish to delete this review?') );
