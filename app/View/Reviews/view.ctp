@@ -1,10 +1,6 @@
-<h2><?php 
-	$review['Review']['title']; 
-?></h2>
-
 <?php
 
-pr($review);
+	echo "<h3>". $review['Review']['title'] ."</h3>";
 
 	echo "<h3>By: ". $review['User']['username'] ."</h3>";
 
