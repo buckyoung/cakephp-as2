@@ -19,7 +19,7 @@
 	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'message', 'action' => 'add') ); 
 
 	echo "<br /><p>Comments: </p>";
-pr($review);
+
 	//For each comment//
 	foreach($review['Comment'] as $comment){
 		echo "<br />";
