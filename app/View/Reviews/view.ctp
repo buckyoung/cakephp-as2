@@ -24,7 +24,7 @@
 	foreach($review['Comment'] as $comment){
 		echo "<br />";
 		echo $comment['body'];
-		echo "<br />by: " . $comment['from'];
+		echo "<br />by: " . $comment['User']['username'];
 		echo "<br />Created: " . $comment['created'];
 		echo "<br />";
 	}
