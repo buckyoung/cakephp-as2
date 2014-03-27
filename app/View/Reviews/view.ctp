@@ -26,6 +26,7 @@ pr($review);
 		echo $comment['body'];
 		echo "<br />by: " . $comment['from'];
 		echo "<br />Created: " . $comment['created'];
+		echo "<br />";
 	}
 	
 
