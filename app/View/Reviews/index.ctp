@@ -30,9 +30,6 @@
 		<td><?php echo $review['Review']['media']; ?></td>
 		<td><?php //OPTIONAL ACTIONS
 
-		pr($userid);
-		pr($review['Review']['user_id']);
-
 		if ( $userid == $review['Review']['user_id'] ){
 			echo $this->Html->link('Edit', array('action' => 'edit'));
 			echo " ";

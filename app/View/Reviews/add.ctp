@@ -1,4 +1,4 @@
-<h2>Add Review to MySQL Database -- DEBUG PAGE</h2>
+<h2>Add Review</h2>
 
 <?php
 
