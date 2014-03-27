@@ -2,6 +2,8 @@
 
 class Review extends AppModel{
 
+	public $belongsTo = 'User';
+
 	public $validate = array(
 
 		'title' => array(

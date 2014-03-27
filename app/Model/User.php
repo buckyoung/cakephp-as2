@@ -5,6 +5,8 @@ App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel{
 
+	public $hasMany = 'Review'; 
+
 	public $validate = array(
 
 		'username' => array(
@@ -17,8 +19,6 @@ class User extends AppModel{
 			'message' => 'Please enter a password.'
 			)
 	);
-
-	//public $hasMany = 'Post'; //FROM Farnan example code 
 
 	public function beforeSave($options = array()) { //HASH PASSWORD before saving the data
 	    if (isset($this->data[$this->alias]['password'])) {
