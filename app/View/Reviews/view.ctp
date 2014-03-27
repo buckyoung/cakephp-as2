@@ -4,6 +4,8 @@
 
 <?php
 
+pr($review);
+
 	echo "<h3>By: ". $review['User']['username'] ."</h3>";
 
 	echo "<h6>Created: ". $review['Review']['created'] ."</h6>";
