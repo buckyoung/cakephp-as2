@@ -26,7 +26,7 @@
 		echo "<br />";
 		echo $comment['body'];
 		//Get username
-		$uname = $this->User->findById($comment['user_id']));
+		$uname = $this->User->findById($comment['user_id']);
 		echo "<br />by: " . $uname;
 		echo "<br />Created: " . $comment['created'];
 		echo "<br />";
