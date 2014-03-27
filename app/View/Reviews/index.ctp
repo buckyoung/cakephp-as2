@@ -34,9 +34,11 @@
 		pr($review['Review']['user_id']);
 
 		if ( $userid == $review['Review']['user_id'] ){
-			echo "owned";
+			echo $this->Html->link('Edit', array('action' => 'edit'));
+			echo " ";
+			echo $this->Html->link('Delete', array('action'=>'delete'));
 		} else {
-			echo "not own";
+			echo "";
 		}
 
 		?></td>
@@ -52,7 +54,7 @@
 <p>
 <?php
 	if ( $userid ){ //if userid is set
-		echo $this->Html->link('Add Review', array('controller' => 'reviews', 'action' => 'add'));
+		echo $this->Html->link('Add Review', array('action' => 'add'));
 	}
 ?>
 </p>
