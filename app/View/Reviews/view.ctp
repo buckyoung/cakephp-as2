@@ -23,7 +23,7 @@
 	//For each comment//
 	foreach($review['Comment'] as $comment){
 		echo $comment['Comment']['body'];
-		echo "by: " . $comment['Comment']['']
+		echo "by: " . $comment['Comment'][''];
 	}
 	
 
