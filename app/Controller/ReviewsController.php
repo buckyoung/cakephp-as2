@@ -24,6 +24,10 @@ class ReviewsController extends AppController{
 			}
 		}
 	}
+
+	public function delete(){
+		pr("delete me?");
+	}
 }
 
 ?>
