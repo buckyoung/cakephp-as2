@@ -25,6 +25,7 @@ class CommentsController extends AppController{
 	}
 
 	public function view($id){
+		
 		$this->set('review', $this->Comment->findById($id));
 	}
 }
