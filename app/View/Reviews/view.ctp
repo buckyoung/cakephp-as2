@@ -1,5 +1,7 @@
 <?php
 
+	pr($review);
+
 	echo $this->Html->link('< Back to Reviews', array('action' => 'index') ); 
 	
 	echo "<h2>". $review['Review']['title'] ."</h2>";
