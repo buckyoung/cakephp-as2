@@ -1,6 +1,6 @@
 <?php
 
-	echo "<h3>". $review['Review']['title'] ."</h3>";
+	echo "<h2>". $review['Review']['title'] ."</h2>";
 
 	echo "<h3>By: ". $review['User']['username'] ."</h3>";
 
