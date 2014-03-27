@@ -3,6 +3,7 @@
 class Review extends AppModel{
 
 	public $belongsTo = 'User';
+	public $hasMany = 'Comment'; 
 
 	public $validate = array(
 

@@ -18,10 +18,16 @@
 
 	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'message', 'action' => 'add') ); 
 
-	echo "<p>Comments: </p>";
+	echo "<br /><p>Comments: </p>";
 
 	//For each comment//
-	echo "";
+	foreach($review['Comment'] as $comment){
+		echo $comment['Comment']['body'];
+		echo "by: " . $comment['Comment']['']
+	}
+	
+
+
 
 	echo $this->Html->link('Add a New Comment', array('controller' => 'comment', 'action' => 'add') ); 
 	
