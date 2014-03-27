@@ -32,6 +32,10 @@ class ReviewsController extends AppController{
 	    }
 
 	}
+
+	public function view($id){
+		$this->set('review', $this->Review->findById($id));
+	}
 }
 
 ?>
