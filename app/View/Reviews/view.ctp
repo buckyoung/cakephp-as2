@@ -4,15 +4,15 @@
 
 <?php
 
-	echo "<h2>By: ". $review['User']['username'] ."</h2>";
+	echo "<h3>By: ". $review['User']['username'] ."</h3>";
 
-	echo "<h3>Created: ". $review['Review']['created'] ."</h3>";
+	echo "<h6>Created: ". $review['Review']['created'] ."</h6>";
 
 	echo "<h4>Rating: ". $review['Review']['rating'] ."</h4>";
 
-	echo "<h5>Type: ". $review['Review']['media'] ."</h5>";
+	echo "<h4>Type: ". $review['Review']['media'] ."</h4>";
 
-	echo "<h6>Rating: ". $review['Review']['body'] ."</h6>";
+	echo "<h2>". $review['Review']['body'] ."</h2>";
 
 	echo "";
 
