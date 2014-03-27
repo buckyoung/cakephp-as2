@@ -20,7 +20,6 @@
 
 	echo "<br /><p>Comments: </p>";
 
-	pr($review);
 	//For each comment//
 	foreach($review['Comment'] as $comment){
 		echo $comment['Comment']['body'];
