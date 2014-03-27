@@ -14,22 +14,13 @@
 
 	echo "<h2>". $review['Review']['body'] ."</h2>";
 
-	echo "";
+	echo "<br /><br /><br />";
 
 	echo "<p>Comments: </p>";
 
+	//For each comment//
 	echo "";
 
-/*
-      [id] => 2
-            [title] => yo
-            [body] => woa doge
-            [rating] => 8
-            [media] => wow
-            [created] => 2014-03-27 01:36:33
-            [modified] => 2014-03-27 01:36:33
-            [user_id] => 1
-        )
-
-*/
+	echo $this->Html->link('Add a New Comment', array('action' => 'index') ); 
+	
 ?>
