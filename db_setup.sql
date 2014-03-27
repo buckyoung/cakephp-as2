@@ -39,5 +39,5 @@ body TEXT,
 created DATETIME,
 modified DATETIME,
 review_id INT UNSIGNED,
-user_id INT UNSIGNED
+username VARCHAR(50)
 );

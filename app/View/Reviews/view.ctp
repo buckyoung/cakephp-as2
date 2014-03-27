@@ -1,7 +1,5 @@
 <?php
 
-	pr($review);
-
 	echo $this->Html->link('< Back to Reviews', array('action' => 'index') ); 
 	
 	echo "<h2>". $review['Review']['title'] ."</h2>";
@@ -24,12 +22,9 @@
 
 	//For each comment//
 	foreach($review['Comment'] as $comment){
-		pr($comment);
 		echo "<br />";
 		echo $comment['body'];
-		//Get username
-		$uname = $this->User->findById($comment['user_id']);
-		echo "<br />by: " . $uname;
+		echo "<br />by: " . $comment['username'];
 		echo "<br />Created: " . $comment['created'];
 		echo "<br />";
 	}
