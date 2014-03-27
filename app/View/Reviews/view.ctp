@@ -18,9 +18,11 @@
 
 	echo "<p>Comments: </p>";
 
+	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'message', 'action' => 'add') ); 
+
 	//For each comment//
 	echo "";
 
-	echo $this->Html->link('Add a New Comment', array('action' => 'index') ); 
+	echo $this->Html->link('Add a New Comment', array('controller' => 'comment', 'action' => 'add') ); 
 	
 ?>
