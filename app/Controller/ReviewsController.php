@@ -25,10 +25,11 @@ class ReviewsController extends AppController{
 		}
 	}
 
-	public function delete(){
-		pr("delete me?");
-		$this->Session->setFlash(__('Review Deleted.'));
-        return $this->redirect(array('action' => 'index'));
+	public function delete($id){
+		if ($this->Review->delete($id)) {
+			$this->Session->setFlash(__('Review Deleted.'));
+	        return $this->redirect(array('action' => 'index'));
+	    }
 
 	}
 }
