@@ -27,7 +27,7 @@
 	<tr>
 		<td><?php 
 
-		echo $this->Html->link($review['Review']['title'], array('action' => 'view')) ; 
+		echo $this->Html->link($review['Review']['title'], array('action' => 'view', $review['Review']['id'])) ; 
 
 		?></td>
 		<td><?php echo $review['Review']['rating']; ?></td>
