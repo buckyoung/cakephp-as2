@@ -25,7 +25,11 @@
 <?php foreach($reviews as $review): ?>
 
 	<tr>
-		<td><?php echo $review['Review']['title']; ?></td>
+		<td><?php 
+
+		echo $this->Html->link($review['Review']['title'], array('action' => 'view'); 
+
+		?></td>
 		<td><?php echo $review['Review']['rating']; ?></td>
 		<td><?php echo $review['Review']['media']; ?></td>
 		<td><?php //OPTIONAL ACTIONS
