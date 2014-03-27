@@ -1,6 +1,6 @@
 <h2><?php 
 	$review['Review']['title']; 
-	pr($created_by);
+	pr($review);
 ?></h2>
 
 <?php
