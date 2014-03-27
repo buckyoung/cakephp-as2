@@ -5,7 +5,18 @@ App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel{
 
-	public $hasMany = array('Review', 'Message'); 
+	public $hasMany = array(
+        'MessageSent' => array(
+            'className' => 'Message',
+            'foreignKey' => 'user_id'
+        ),
+        'MessageReceived' => array(
+            'className' => 'Message',
+            'foreignKey' => 'recipient_id'
+        ),
+        'Review',
+        'Comment'
+    );
 
 	public $validate = array(
 

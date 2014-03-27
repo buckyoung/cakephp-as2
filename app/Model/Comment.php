@@ -2,7 +2,7 @@
 
 class Comment extends AppModel{
 
-	public $belongsTo = 'Review';
+	public $belongsTo = array('Review','User');
 
 	public $validate = array(
 

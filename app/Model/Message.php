@@ -2,7 +2,16 @@
 
 class Message extends AppModel{
 
-	public $belongsTo = 'User';
+	public $belongsTo = array(
+        'Sender' => array(
+            'className' => 'User',
+            'foreignKey' => 'user_id'
+        ),
+        'Recipient' => array(
+            'className' => 'User',
+            'foreignKey' => 'recipient_id'
+        )
+    );
 
 	public $validate = array(
 
