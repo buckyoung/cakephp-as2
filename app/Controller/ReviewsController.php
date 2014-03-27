@@ -15,6 +15,7 @@ class ReviewsController extends AppController{
 	public function add(){
 		if( $this->request->is('post') ){
 			//save data
+			$this->request->data['Review']['user_id'] = $this->Auth->user('id');
 			if ($this->Review->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Review created.'));
                 return $this->redirect(array('action' => 'index'));
