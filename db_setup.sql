@@ -4,11 +4,11 @@ DROP TABLE IF EXISTS messages;
 CREATE TABLE messages(
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(50),
-`from` VARCHAR(50),
 body TEXT,
 created DATETIME,
 modified DATETIME,
-user_id INT UNSIGNED
+user_id INT UNSIGNED, 
+recipient_id INT UNSIGNED
 );
 
 DROP TABLE IF EXISTS users;
@@ -36,8 +36,8 @@ DROP TABLE IF EXISTS comments;
 CREATE TABLE comments(
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 body TEXT,
-`from` VARCHAR(50),
 created DATETIME,
 modified DATETIME,
-review_id INT UNSIGNED
+review_id INT UNSIGNED,
+user_id INT UNSIGNED
 );
