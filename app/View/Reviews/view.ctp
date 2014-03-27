@@ -22,8 +22,9 @@
 pr($review);
 	//For each comment//
 	foreach($review['Comment'] as $comment){
-		echo $comment['Comment']['body'];
-		echo "by: " . $comment['Comment'][''];
+		echo $comment['body'];
+		echo "<br />by: " . $comment['from'];
+		echo "<br />Created: " . $comment['created'];
 	}
 	
 
