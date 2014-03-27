@@ -35,7 +35,9 @@ class ReviewsController extends AppController{
 
 	public function view($id){
 		$review = $this->Review->findById($id)
-		$this->set('created_by', $this->User->findById($review['Review']['user_id'])); //set based on who's id created it 
+		$username = $this->User->findById($review['Review']['user_id']);
+
+		$this->set('created_by', $username); //set based on who's id created it 
 		$this->set('review', $review);
 	}
 }
