@@ -43,29 +43,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		
 		<div id="content">
 		
-		
-		
-		
-		<div id="DEBUG_NAV">
-			<h5>Debug Navigation</h5>
-			<h5>[View/Layouts/default.ctp]</h5>
-			<p>
-<a href="/~bcy3/cakephp/users/">User Index</a><br>
-<a href="/~bcy3/cakephp/users/add">Add User</a><br>
-<a href="/~bcy3/cakephp/users/login">Login</a><br>
-
-<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/">Review Index</a><br>
-<a href="http://cs1520.cs.pitt.edu/~bcy3/cakephp/reviews/add">Add Review</a><br>
-			</p>
-		<hr><hr>
-		<br>			
-		</div>
-		
-		
-
-
-
-
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
