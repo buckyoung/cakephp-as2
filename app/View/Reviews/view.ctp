@@ -1,10 +1,12 @@
 <?php
 
+	echo $this->Html->link('< Back to Reviews', array('action' => 'index') ); 
+	
 	echo "<h2>". $review['Review']['title'] ."</h2>";
 
 	echo "<h3>By: ". $review['User']['username'] ."</h3>";
 
-	echo "<h6>Created: ". $review['Review']['created'] ."</h6>";
+	echo "<h6>Created: ". $review['Review']['created'] ."</h6><br />";
 
 	echo "<h4>Rating: ". $review['Review']['rating'] ."</h4>";
 
