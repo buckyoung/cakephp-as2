@@ -37,7 +37,7 @@
 		if ( $userid == $review['Review']['user_id'] ){
 			echo $this->Html->link('Edit', array('action' => 'edit'));
 			echo " ";
-			echo $this->Html->link('Delete', array('action'=>'delete'), array(),"Are you sure you wish to delete this recipe?");
+			echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array(),"Are you sure you wish to delete this review?");
 		} else {
 			echo "";
 		}
