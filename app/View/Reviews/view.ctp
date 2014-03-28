@@ -30,7 +30,7 @@
 			echo " ";
 			echo $this->Html->link('Edit', array('controller' => 'comments', 'action' => 'edit', $comment['id']));
 			echo " ";
-			echo $this->Html->link('Delete', array('controller' => 'comments', 'action'=>'delete', $comment['id']), array('confirm'=> 'Are you sure you wish to delete this comment?') ); //Might need to send reviewid
+			echo $this->Html->link('Delete', array('controller' => 'comments', 'action'=>'delete', $comment['id'], $comment['review_id']), array('confirm'=> 'Are you sure you wish to delete this comment?') ); //Might need to send reviewid
 		} //NO ELSE
 		echo "<br />Created: " . $comment['created'];
 		echo "<br />";
