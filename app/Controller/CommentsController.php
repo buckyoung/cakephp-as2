@@ -31,7 +31,7 @@ class CommentsController extends AppController{
 			$this->request->data['Comment']['id'] = $id; //Comment id
 			$this->request->data['Comment']['review_id'] = $review_id; //Review id
 			$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
-
+pr($this->request->data['Comment']);
 			if ($this->Comment->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Comment Edited.'));
                 return $this->redirect(array('controller' => 'reviews','action' => 'view', $review_id)); //go back to the view id we were on!
@@ -40,6 +40,7 @@ class CommentsController extends AppController{
 			}
 			
 		} else {
+			pr($this->request->data['Comment']);
 			$this->request->data = $this->Comment->findById($id);
 		}
 
