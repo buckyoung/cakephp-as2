@@ -27,7 +27,7 @@ class CommentsController extends AppController{
 
 	public function edit($id, $review_id){
 
-		if( $this->request->is('post' || 'put') ){
+		if( $this->request->is(array('post', 'put')) ){
 			pr("in POST!!!!!!");
 			//save data
 			//$this->Comment->id = $id;
