@@ -1,6 +1,7 @@
 <?php
 
 class CommentsController extends AppController{
+	public $helpers = array('Html', 'Form');
 	
 	public function add($id){ //Pass review id 
 		if( $this->request->is('post') ){
