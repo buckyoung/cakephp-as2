@@ -26,7 +26,7 @@ class CommentsController extends AppController{
 
 	public function edit($id, $review_id){
 
-		if( $this->request->is('post') ){
+		if( $this->request->is('post' || 'put') ){
 			//save data
 			//$this->Comment->id = $id;
 			$this->request->data['Comment']['id'] = $id; //Comment id
@@ -44,7 +44,7 @@ pr($this->request->data['Comment']);
 			
 		} else {
 			$this->request->data = $this->Comment->findById($id);
-			
+
 			pr($this->request->data['Comment']);
 		}
 
