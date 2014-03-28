@@ -16,10 +16,10 @@ class CommentsController extends AppController{
 		}
 	}
 
-	public function delete($commentid, $reviewid){
-		if ($this->Comment->delete($commentid)) {
+	public function delete($id){
+		if ($this->Comment->delete($id)) {
 			$this->Session->setFlash(__('Comment Deleted.'));
-	        return $this->redirect(array('controller' => 'reviews', 'action' => 'view', $reviewid)); //go to the review id that we were on!
+	        //return $this->redirect(array('controller' => 'reviews', 'action' => 'view', $reviewid)); //go to the review id that we were on!
 	    }
 
 	}

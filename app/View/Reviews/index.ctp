@@ -38,9 +38,7 @@
 			echo $this->Html->link('Edit', array('action' => 'edit'));
 			echo " ";
 			echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array('confirm'=> 'Are you sure you wish to delete this review?') );
-		} else {
-			echo "";
-		}
+		} //NO ELSE
 
 		?></td>
 		<td><?php echo $review['Review']['created']; ?></td>
