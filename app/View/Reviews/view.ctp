@@ -14,11 +14,11 @@
 
 	echo "<h2>". $review['Review']['body'] ."</h2>";
 
-	echo "<br /><br />";
+	echo "<br />";
 
 	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'message', 'action' => 'add') ); 
 
-	echo "<br /><hr /><p>Comments: </p>";
+	echo "<br /><br /><hr /><br /><p>Comments: </p>";
 
 	//For each comment//
 	foreach($review['Comment'] as $comment){
