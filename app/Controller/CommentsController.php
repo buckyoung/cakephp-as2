@@ -26,10 +26,7 @@ class CommentsController extends AppController{
 
 	public function edit($id, $review_id){
 
-		$this->request->data = $this->Comment->findById($id);
-
 		if( $this->request->is('post') ){
-			
 			//save data
 			$this->request->data['Comment']['id'] = $id; //Comment id
 			$this->request->data['Comment']['review_id'] = $review_id; //Review id
@@ -42,6 +39,8 @@ class CommentsController extends AppController{
 				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
 			}
 			
+		} else {
+			$this->request->data = $this->Comment->findById($id);
 		}
 
 	}
