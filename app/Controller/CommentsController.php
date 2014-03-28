@@ -17,6 +17,8 @@ class CommentsController extends AppController{
 	}
 
 	public function delete($id, $review_id){
+		$review_id = $this->Comment['review_id'];
+
 		if ($this->Comment->delete($id)) {
 			$this->Session->setFlash(__('Comment Deleted.'));
 	        return $this->redirect(array('controller' => 'reviews', 'action' => 'view', $review_id)); //go to the review id that we were on!
