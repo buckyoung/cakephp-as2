@@ -27,7 +27,17 @@ class UsersController extends AppController{
 			//save data
 			if($this->User->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Welcome, new user!'));
-                return $this->redirect(array('controller' => 'reviews', 'action' => 'index'));
+                	
+                //Auto-login new users
+                if ($this->Auth->login()) {   
+	         	  	return $this->redirect($this->Auth->redirectUrl()); //redirects from the appcontroller
+	        	} else {
+              		$this->Session->setFlash(__('Invalid username or password, try again'));
+            	}
+
+
+
+                //return $this->redirect(array('controller' => 'reviews', 'action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
 			}
@@ -39,7 +49,6 @@ class UsersController extends AppController{
 	public function login(){
 		if ($this->request->is('post')) {
 	        if ($this->Auth->login()) {   
-			
 	           	return $this->redirect($this->Auth->redirectUrl()); //redirects from the appcontroller
 	        } else {
               	$this->Session->setFlash(__('Invalid username or password, try again'));
