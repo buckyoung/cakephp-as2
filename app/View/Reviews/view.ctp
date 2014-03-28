@@ -28,7 +28,7 @@
 		echo "<br />by: " . $comment['username'];
 		if ( $username == $comment['username'] ){
 			echo " ";
-			echo $this->Html->link('Edit', array('controller' => 'comments', 'action' => 'edit', $comment['id']));
+			echo $this->Html->link('Edit', array('controller' => 'comments', 'action' => 'edit', $comment['id'], $comment['review_id']));
 			echo " ";
 			echo $this->Html->link('Delete', array('controller' => 'comments', 'action'=>'delete', $comment['id'], $comment['review_id']), array('confirm'=> 'Are you sure you wish to delete this comment?') ); //Might need to send reviewid
 		} //NO ELSE
