@@ -28,14 +28,11 @@ class CommentsController extends AppController{
 	public function edit($id, $review_id){
 
 		if( $this->request->is(array('post', 'put')) ){
-			pr("in POST!!!!!!");
 			//save data
 			//$this->Comment->id = $id;
-			$this->request->data['Comment']['id'] = $id; //Comment id
-			$this->request->data['Comment']['review_id'] = $review_id; //Review id
-			$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
-//DEBUG, NOT PRINTING STUFF ABOVE.
-pr($this->request->data['Comment']);
+			//$this->request->data['Comment']['id'] = $id; //Comment id
+			//$this->request->data['Comment']['review_id'] = $review_id; //Review id
+			//$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
 
 			if ($this->Comment->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Comment Edited.'));
