@@ -36,8 +36,9 @@ DROP TABLE IF EXISTS comments;
 CREATE TABLE comments(
 id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 body TEXT,
+username VARCHAR(50),
 created DATETIME,
 modified DATETIME,
 review_id INT UNSIGNED,
-username VARCHAR(50)
+user_id INT UNSIGNED
 );
