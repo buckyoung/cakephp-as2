@@ -17,6 +17,7 @@ class CommentsController extends AppController{
 	}
 
 	public function delete($id, $review_id){
+		pr($this->Comment);
 		$review_id = $this->Comment['review_id'];
 
 		if ($this->Comment->delete($id)) {
