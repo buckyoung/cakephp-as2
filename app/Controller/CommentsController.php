@@ -24,13 +24,15 @@ class CommentsController extends AppController{
 	}
 
 	public function edit($id, $review_id){
+
+		$this->set('oldbody', $this->Comment->findById($id));
+
 		if( $this->request->is('post') ){
 			
 			//save data
 			$this->request->data['Comment']['id'] = $id; //Comment id
 			$this->request->data['Comment']['review_id'] = $review_id; //Review id
-			//$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
-			$this->request->data['Comment']['username'] = "POOP";
+			$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
 
 			if ($this->Comment->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Comment Edited.'));
