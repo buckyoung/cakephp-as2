@@ -28,7 +28,8 @@ class CommentsController extends AppController{
 
 		if( $this->request->is('post') ){
 			//save data
-			$this->request->data['Comment']['id'] = $id; //Comment id
+			$this->Comment->id = $id;
+			//$this->request->data['Comment']['id'] = $id; //Comment id
 			$this->request->data['Comment']['review_id'] = $review_id; //Review id
 			$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
 pr($this->request->data['Comment']);
