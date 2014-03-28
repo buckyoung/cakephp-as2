@@ -36,7 +36,7 @@
 		echo "<br />";
 	}
 	
-
+	echo "<br />"
 
 
 	echo $this->Html->link('Add a New Comment', array('controller' => 'comments', 'action' => 'add', $review['Review']['id']) ); 
