@@ -25,6 +25,8 @@ class CommentsController extends AppController{
 
 	public function edit($id, $review_id){
 
+		$this->request->data = $this->comment->findById($id);
+
 		if( $this->request->is('post') ){
 			
 			//save data
