@@ -12,6 +12,6 @@
 
 	echo "<br />";
 
-	echo $this->Html->link('Reply to '.$Message['Message']['user_id'], array('controller' => 'messages', 'action' => 'add', $message['Message']['user_id'], -1) ); 
+	echo $this->Html->link('Reply to '.$message['Message']['user_id'], array('controller' => 'messages', 'action' => 'add', $message['Message']['user_id'], -1) ); 
 	
 ?>
