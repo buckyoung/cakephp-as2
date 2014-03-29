@@ -6,7 +6,7 @@
 
 	echo "<h2>Title: ". $message['Message']['title'] ."</h2>";
 
-	echo "<h3>From: ". $message['Message']['user_id'] ."</h3>";
+	echo "<h3>From: ". $message['Senter']['username'] ."</h3>";
 
 	echo "<h6>Created: ". $message['Message']['created'] ."</h6><br />";
 
@@ -14,6 +14,6 @@
 
 	echo "<br />";
 
-	echo $this->Html->link('Reply to '.$message['Message']['user_id'], array('controller' => 'messages', 'action' => 'add', $message['Message']['user_id'], -1) ); 
+	echo $this->Html->link('Reply to '.$message['Sender']['username'], array('controller' => 'messages', 'action' => 'add', $message['Sender']['id'], -1) ); 
 	
 ?>
