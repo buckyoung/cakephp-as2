@@ -25,11 +25,21 @@ class MessagesController extends AppController{
 
 			if ($this->Message->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Message sent.'));
+
+				if ($review_id == -1){ //return to message view
+					return $this->redirect(array('controller' => 'Messages', 'action' => 'index')); //go to the review id that we were on!
+				}
                 return $this->redirect(array('controller' => 'reviews', 'action' => 'view', $review_id)); //go to the review id that we were on!
 			} else {
 				$this->Session->setFlash(__('The message could not be sent. Please, try again.'));
 			}
 		}
+	}
+
+	public function view($id){
+		$this->set('id', $this->Auth->user('id'));
+		$this->set('username', $this->Auth->user('username')); 
+		$this->set('message', $this->Message->findById($id));
 	}
 
 }

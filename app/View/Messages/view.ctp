@@ -1,30 +1,40 @@
-<?php echo $this->Html->link('< Back to Reviews', array('controller' => 'Reviews', 'action' => 'index') ); ?>
-<h2><?php echo $username . "'s Messages"; ?></h2>
-
 <?php
-	echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
-	echo "<br />";
-?>
 
-
-<table>
-
-<tr><th>Title</th><th>From</th><th>Options</th><th>Created</th></tr>
-
-
-<?php foreach($messages as $message): ?>
-	<tr>
-		<td><?php echo $message['Message']['title']; ?></td>
-		<td><?php echo $message['Message']['user_id'];?></td>
-		<td><?php echo $this->Html->link('Delete', array('action'=>'delete', $message['Message']['id']), array('confirm'=> 'Are you sure you wish to delete this message?') );?></td>
-		<td><?php echo $message['Message']['created']; ?></td>
-	</tr>
+	echo $this->Html->link('< Back to Messages', array('action' => 'index') ); 
 	
-<?php endforeach; 
+	echo "<h3>From: ". $message['Message']['user_id'] ."</h3>";
 
-//echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array('confirm'=> 'Are you sure you wish to delete this review?') );
+	echo "<h2>". $message['Message']['title'] ."</h2>";
 
+	echo "<h6>Created: ". $message['Message']['created'] ."</h6><br />";
+
+	echo "<h2>". $message['Message']['body'] ."</h2>";
+
+	echo "<br />";
+
+	echo $this->Html->link('Reply to '.$Message['Message']['user_id'], array('controller' => 'messages', 'action' => 'add', $message['Message']['user_id'], -1) ); 
+
+	echo "<br /><br /><hr /><br /><p>Comments: </p>";
+
+	//For each comment//
+	foreach($review['Comment'] as $comment){
+
+		echo "<br />";
+		echo $comment['body'];
+		echo "<br />by: " . $comment['username'];
+		if ( $username == $comment['username'] ){
+			echo " ";
+			echo $this->Html->link('Edit', array('controller' => 'comments', 'action' => 'edit', $comment['id'], $comment['review_id']));
+			echo " ";
+			echo $this->Html->link('Delete', array('controller' => 'comments', 'action'=>'delete', $comment['id'], $comment['review_id']), array('confirm'=> 'Are you sure you wish to delete this comment?') ); //Might need to send reviewid
+		} //NO ELSE
+		echo "<br />Created: " . $comment['created'];
+		echo "<br />";
+	}
+	
+	echo "<br />";
+
+
+	echo $this->Html->link('Add a New Comment', array('controller' => 'comments', 'action' => 'add', $review['Review']['id']) ); 
+	
 ?>
-
-
-</table>
