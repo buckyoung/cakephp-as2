@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"review",
+				"review_id"
+			],
+			[
 				"margi",
 				"margin-right"
 			],
@@ -510,10 +514,6 @@
 			[
 				"USER",
 				"USERLEN"
-			],
-			[
-				"nex",
-				"next_msg"
 			]
 		]
 	},
@@ -544,6 +544,22 @@
 	},
 	"file_history":
 	[
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Messages/view.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/MessagesController.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Messages/index.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/index.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Messages/add.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/view.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/ReviewsController.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/edit.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/CommentsController.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Comments/edit.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/UsersController.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/Comment.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Comments/view.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/add.ctp",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/User.php",
+		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/Message.php",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1635/2_ScriptFathom/ScriptFathom/scriptfathom/README.md",
 		"/Users/BuckYoung/Dropbox/Website/.htaccess",
 		"/Users/BuckYoung/Dropbox/Website/public_html/wp-content/themes/fffolio/style.css",
@@ -556,20 +572,9 @@
 		"/Users/BuckYoung/cocos2d-x-2.1.5/HelloWorld/Classes/AppDelegate.cpp",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1635/2_ScriptFathom/ScriptFathom/scriptfathom/src/main/res/layout/activity_main.xml",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1635/2_ScriptFathom/ScriptFathom/scriptfathom/src/main/java/edu/pitt/bcy3/scriptfathom/MyView.java",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/view.ctp",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/CommentsController.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Comments/view.ctp",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/index.ctp",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Comments/add.ctp",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/Comment.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/User.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/MessagesController.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/Message.php",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Model/Review.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/ReviewsController.php",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Layouts/default.ctp",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Reviews/add.ctp",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/UsersController.php",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/View/Users/add.ctp",
 		"/Users/BuckYoung/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app/Controller/AppController.php",
@@ -666,12 +671,7 @@
 		"/Users/BuckYoung/Dropbox/Website/public_html/card/index.html",
 		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As1/new_user.php",
 		"/Users/BuckYoung/Dropbox/Website/public_html/rivercityjava/index.html",
-		"/Users/BuckYoung/Dropbox/Website/public_html/rivercityjava/css/custom-style.css",
-		"/Users/BuckYoung/Dropbox/Website/public_html/narcisi/wp-content/themes/elegantia-theme/include/menu-post-type.php",
-		"/Users/BuckYoung/Dropbox/Website/public_html/narcisi/wp-content/themes/elegantia-theme/single-gallery-item.php",
-		"/Users/BuckYoung/Dropbox/Website/public_html/narcisi/wp-content/themes/elegantia-theme/taxonomy-gallery-item-type.php",
-		"/Users/BuckYoung/Dropbox/Website/public_html/narcisi/wp-content/themes/elegantia-theme/include/menu-item-post-type.php",
-		"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As1/test.php"
+		"/Users/BuckYoung/Dropbox/Website/public_html/rivercityjava/css/custom-style.css"
 	],
 	"find":
 	{
@@ -679,7 +679,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"/Users/BuckYoung/Dropbox/School/14.01.spring/CS1520/As2/cakephp-as2/app",
@@ -691,6 +691,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"findbyid",
 			"user_id",
 			"rate",
 			"rand",
@@ -817,8 +818,7 @@
 			"} ",
 			"; ",
 			"highlight",
-			"analytics",
-			"services"
+			"analytics"
 		],
 		"highlight": true,
 		"in_selection": false,
