@@ -1,30 +1,31 @@
 <h2><?php echo $username . "'s Messages"; ?></h2>
 
+<?php
+	echo "Logged in as " . $username . "<br />";
+	echo "<br />";
+	echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
+?>
+
 
 <table>
 
-<tr><th>From</th><th>Subject</th><th>Created</th></tr>
+<tr><th>Title</th><th>From</th><th>Options</th><th>Created</th></tr>
 
 
 <?php foreach($messages as $message): ?>
 	<tr>
+		<td><?php echo $message['Message']['title']; ?></td>
 		<td><?php pr($message);//debug
 		echo $message['Message']['user_id'];?></td>
-		<td><?php echo $message['Message']['title']; ?></td>
+		<td><?php echo $this->Html->link('Delete', array('action'=>'delete', $message['Message']['id']), array('confirm'=> 'Are you sure you wish to delete this message?') );?></td>
 		<td><?php echo $message['Message']['created']; ?></td>
-		<td><?php //OPTIONAL ACTIONS
-
-		if ( $userid == $review['User']['id'] ){
-			echo $this->Html->link('Edit', array('action' => 'edit', $review['Review']['id']));
-			echo " ";
-			echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array('confirm'=> 'Are you sure you wish to delete this review?') );
-		} //NO ELSE
-
-		?></td>
-		<td><?php echo $review['Review']['created']; ?></td>
 	</tr>
 	
-<?php endforeach; ?>
+<?php endforeach; 
+
+//echo $this->Html->link('Delete', array('action'=>'delete', $review['Review']['id']), array('confirm'=> 'Are you sure you wish to delete this review?') );
+
+?>
 
 
 </table>

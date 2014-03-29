@@ -14,6 +14,14 @@ class MessagesController extends AppController{
 
 	}
 
+	public function delete($id){
+		if ($this->Message->delete($id)) {
+			$this->Session->setFlash(__('Message Deleted.'));
+	        return $this->redirect(array('action' => 'view'));
+	    }
+
+	}
+
 }
 
 ?>
