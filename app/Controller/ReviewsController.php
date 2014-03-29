@@ -43,21 +43,21 @@ class ReviewsController extends AppController{
 		if( $this->request->is(array('post', 'put')) ){
 			//save data
 			$this->request->data['Review']['id'] = $id; //Review id
-			
-			$this->request->data['Review']['review_id'] = $review_id; //Review id
-			$this->request->data['Review']['username'] = $this->Auth->user('username'); //This is absolutely needed.
+
+			//$this->request->data['Review']['review_id'] = $review_id; //Review id
+			//$this->request->data['Review']['username'] = $this->Auth->user('username'); //This is absolutely needed.
 
 			if ($this->Comment->save( $this->request->data ) ){
-				$this->Session->setFlash(__('Comment Edited.'));
-                return $this->redirect(array('controller' => 'reviews','action' => 'view', $review_id)); //go back to the view id we were on!
+				$this->Session->setFlash(__('Review Edited.'));
+                return $this->redirect(array('controller' => 'reviews','action' => 'index')); //go back to the view id we were on!
 			} else {
 				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
 			}
 			
 		} else {
-			$this->request->data = $this->Comment->findById($id);
+			$this->request->data = $this->Review->findById($id);
 
-			pr($this->request->data['Comment']);
+			pr($this->request->data['Review']);
 		}
 
 	}

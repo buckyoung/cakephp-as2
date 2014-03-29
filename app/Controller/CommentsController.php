@@ -43,7 +43,7 @@ class CommentsController extends AppController{
 		} else {
 			$this->request->data = $this->Comment->findById($id);
 
-			pr($this->request->data['Comment']);
+			//pr($this->request->data['Comment']);
 		}
 
 	}
