@@ -1,10 +1,12 @@
 <?php
 
-	echo $this->Html->link('< Back to Messages', array('action' => 'index') ); 
+	pr($message);
 	
-	echo "<h3>From: ". $message['Message']['user_id'] ."</h3>";
+	echo $this->Html->link('< Back to Messages', array('action' => 'index') ); 
 
 	echo "<h2>Title: ". $message['Message']['title'] ."</h2>";
+
+	echo "<h3>From: ". $message['Message']['user_id'] ."</h3>";
 
 	echo "<h6>Created: ". $message['Message']['created'] ."</h6><br />";
 
