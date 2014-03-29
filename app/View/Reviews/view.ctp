@@ -16,7 +16,7 @@
 
 	echo "<br />";
 
-	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'message', 'action' => 'add', $id, $review['Review']['id']) ); 
+	echo $this->Html->link('Send Message to '.$review['User']['username'], array('controller' => 'messages', 'action' => 'add', $id, $review['Review']['id']) ); 
 
 	echo "<br /><br /><hr /><br /><p>Comments: </p>";
 
