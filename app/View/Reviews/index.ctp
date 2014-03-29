@@ -10,7 +10,7 @@
 		echo $this->Html->link('Create New User', array('controller' => 'users', 'action' => 'add'));
 	} else {
 		echo "Logged in as " . $username . "<br />";
-		echo $this->Html->link('View Your Messages', array('controller' => 'messages', 'action' => 'view'));
+		echo $this->Html->link('View Your Messages', array('controller' => 'messages', 'action' => 'index'));
 		echo "<br />";
 		echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
 

@@ -3,7 +3,7 @@
 class MessagesController extends AppController{
 	public $helpers = array('Html', 'Form');
 	
-	public function view(){
+	public function index(){
 		$messages = $this->Message->findAllByRecipientId($this->Auth->user('id'));
 		pr($messages);
 
@@ -15,9 +15,8 @@ class MessagesController extends AppController{
 	public function delete($id){
 		if ($this->Message->delete($id)) {
 			$this->Session->setFlash(__('Message Deleted.'));
-	        return $this->redirect(array('action' => 'view'));
+	        return $this->redirect(array('action' => 'index'));
 	    }
-
 	}
 
 	public function add($to, $review_id){
