@@ -37,8 +37,6 @@ class MessagesController extends AppController{
 	}
 
 	public function view($id){
-		$this->set('id', $this->Auth->user('id'));
-		$this->set('username', $this->Auth->user('username')); 
 		$this->set('message', $this->Message->findById($id));
 	}
 

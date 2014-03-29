@@ -15,5 +15,7 @@
 	echo "<br />";
 
 	echo $this->Html->link('Reply to '.$message['Sender']['username'], array('controller' => 'messages', 'action' => 'add', $message['Sender']['id'], -1) ); 
+
+	echo $this->Html->link('Delete', array('action'=>'delete', $message['Message']['id']), array('confirm'=> 'Are you sure you wish to delete this message?') );
 	
 ?>
