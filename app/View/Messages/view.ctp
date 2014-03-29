@@ -15,8 +15,7 @@
 <?php foreach($messages as $message): ?>
 	<tr>
 		<td><?php echo $message['Message']['title']; ?></td>
-		<td><?php pr($message);//debug
-		echo $message['Message']['user_id'];?></td>
+		<td><?php echo $message['Message']['user_id'];?></td>
 		<td><?php echo $this->Html->link('Delete', array('action'=>'delete', $message['Message']['id']), array('confirm'=> 'Are you sure you wish to delete this message?') );?></td>
 		<td><?php echo $message['Message']['created']; ?></td>
 	</tr>
