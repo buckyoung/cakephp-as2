@@ -52,9 +52,9 @@
 <br />
 <p>
 <?php
-	if ( $userid ){ //if userid is set
+	//if ( $userid ){ //if userid is set
 		echo $this->Html->link('Add Review', array('action' => 'add'));
-	}
+	//}
 ?>
 </p>
 
