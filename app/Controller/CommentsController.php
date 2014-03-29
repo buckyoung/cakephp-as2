@@ -30,8 +30,8 @@ class CommentsController extends AppController{
 		if( $this->request->is(array('post', 'put')) ){
 			//save data
 			$this->request->data['Comment']['id'] = $id; //Comment id
-			$this->request->data['Comment']['review_id'] = $review_id; //Review id
-			$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
+			//$this->request->data['Comment']['review_id'] = $review_id; //Review id
+			//$this->request->data['Comment']['username'] = $this->Auth->user('username'); //This is absolutely needed.
 
 			if ($this->Comment->save( $this->request->data ) ){
 				$this->Session->setFlash(__('Comment Edited.'));

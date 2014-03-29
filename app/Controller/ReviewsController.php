@@ -37,6 +37,30 @@ class ReviewsController extends AppController{
 		$this->set('username', $this->Auth->user('username')); 
 		$this->set('review', $this->Review->findById($id));
 	}
+
+	public function edit($id){
+
+		if( $this->request->is(array('post', 'put')) ){
+			//save data
+			$this->request->data['Review']['id'] = $id; //Review id
+			
+			$this->request->data['Review']['review_id'] = $review_id; //Review id
+			$this->request->data['Review']['username'] = $this->Auth->user('username'); //This is absolutely needed.
+
+			if ($this->Comment->save( $this->request->data ) ){
+				$this->Session->setFlash(__('Comment Edited.'));
+                return $this->redirect(array('controller' => 'reviews','action' => 'view', $review_id)); //go back to the view id we were on!
+			} else {
+				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
+			}
+			
+		} else {
+			$this->request->data = $this->Comment->findById($id);
+
+			pr($this->request->data['Comment']);
+		}
+
+	}
 }
 
 ?>
