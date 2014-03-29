@@ -1,6 +1,9 @@
+<?php echo $this->Html->link('< Back to Reviews', array('controller' => 'Reviews', 'action' => 'index') ); ?>
 <h2><?php echo $username . "'s Messages"; ?></h2>
 
 <?php
+
+
 	echo "Logged in as " . $username . "<br />";
 	echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout'));
 	echo "<br />";
