@@ -1,6 +1,4 @@
 <?php
-
-	pr($message);
 	
 	echo $this->Html->link('< Back to Messages', array('action' => 'index') ); 
 
