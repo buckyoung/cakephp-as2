@@ -6,7 +6,7 @@
 
 	echo "<h2>Title: ". $message['Message']['title'] ."</h2>";
 
-	echo "<h3>From: ". $message['Senter']['username'] ."</h3>";
+	echo "<h3>From: ". $message['Sender']['username'] ."</h3>";
 
 	echo "<h6>Created: ". $message['Message']['created'] ."</h6><br />";
 
